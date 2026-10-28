@@ -13,8 +13,3 @@ Aspiring Product Manager and Data Analyst focused on data-driven decision-making
 - **Machine Learning**: LightGBM, Scikit-learn, TreeSHAP, Optuna
 - **Web & Serving**: Flask, Streamlit, Pydantic, Docker
 - **Testing & Tooling**: Pytest, Ruff, GitHub Actions CI
-
-## Contact
-
-- LinkedIn: TODO-ADD-LINKEDIN
-- Email: TODO-ADD-EMAIL
