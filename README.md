@@ -1,15 +1,29 @@
 # Aditya
 
-Aspiring Product Manager and Data Analyst focused on data-driven decision-making, machine learning applications, and measurable business outcomes. Experienced in building operational analytics tools, demand planning simulations, and explainable ML services.
+Software and applied-AI engineer focused on distributed systems, real-time architectures, and production machine learning. Experienced in building high-concurrency transactional engines, guarded natural-language-to-SQL pipelines, and inventory demand planning systems. Seeking software engineering and applied-AI internships for summer 2027.
 
 ## Projects
 
-- [grocery-demand-planner](https://github.com/lazycoder52/grocery-demand-planner): End-to-end ML demand forecasting and inventory replenishment system across 54 stores and 33 product families on public Favorita grocery data, reducing walk-forward forecast error from 16.33% to 13.49% WAPE.
-- [fertilizer](https://github.com/lazycoder52/fertilizer): Agronomic fertilizer recommendation service with a tuned Random Forest classifier, TreeSHAP local explainability, Pydantic v2 validation contracts, and a Flask REST API.
+- [BidStream](https://github.com/lazycoder52/bidstream): Real-time auction engine with pessimistic row locking (`SELECT ... FOR UPDATE`), atomic idempotency keys, double-layer closing, and multi-instance WebSocket synchronization.
+  - **Stack**: TypeScript, NestJS, Express, Socket.IO, PostgreSQL 16, Redis 7, BullMQ, Prisma, React 19, Docker
+  - **Metric**: Sustained 515.2 req/s with 0 database invariant violations under a 500-VU bidding storm (measured on a shared 2-vCPU GitHub Actions runner).
+- [Analytics Copilot](https://github.com/lazycoder52/analytics-copilot): Guarded natural-language-to-SQL assistant and offline-reproducible evaluation harness over Parquet demand planning aggregates.
+  - **Stack**: Python, DuckDB, sqlglot, FastAPI, Pydantic, Wilson score interval evaluation harness
+  - **Metric**: 70.0% strict execution accuracy (28/40) on a 45-question gold benchmark (replayed from recorded Groq `openai/gpt-oss-120b` calls; strict scoring penalizes column projection/order).
+- [Fertilizer Recommendation Service](https://github.com/lazycoder52/fertilizer): Agronomic fertilizer recommendation service with a tuned Random Forest classifier, TreeSHAP local feature attribution, and Pydantic v2 validation contracts.
+  - **Stack**: Python, Scikit-learn, Random Forest, TreeSHAP, Optuna, Pydantic v2, Flask, Docker
+  - **Metric**: 98.71% Top-1 accuracy and 0.9431 Macro-F1 on a 620-sample holdout (synthetic benchmark dataset with generation artifacts, not validated on real farm data).
+- [Grocery Demand Planner](https://github.com/lazycoder52/grocery-demand-planner): End-to-end grocery demand forecasting and periodic $(R, S)$ replenishment simulation across 54 stores and 33 product families on public Corporación Favorita data.
+  - **Stack**: Python, LightGBM, DuckDB, Pandas, NumPy, Streamlit
+  - **Metric**: Reduces walk-forward forecast error from 16.33% to 13.49% WAPE across a 5-fold rolling-origin backtest (public Kaggle Corporación Favorita historical data).
+- [Collaborative Whiteboard](https://github.com/lazycoder52/collaborative-whiteboard): Real-time collaborative whiteboard extending an AlgoZenith canvas tutorial base with an append-only delta streaming protocol, debounced persistence, and per-user undo/redo.
+  - **Stack**: React 18, HTML5 Canvas, Rough.js, perfect-freehand, Node.js, Express, Socket.IO, MongoDB, Zod
+  - **Metric**: 97.38% wire data reduction and 66.00% network event reduction compared to monolithic full-canvas broadcasts (synthetic 200-point stroke benchmark).
 
 ## Skills and Tools
 
-- **Languages & Data**: Python, SQL, DuckDB, Pandas, NumPy
-- **Machine Learning**: LightGBM, Scikit-learn, TreeSHAP, Optuna
-- **Web & Serving**: Flask, Streamlit, Pydantic, Docker
-- **Testing & Tooling**: Pytest, Ruff, GitHub Actions CI
+- **Languages & Runtimes**: TypeScript, JavaScript (Node.js), Python, SQL
+- **Frameworks & Libraries**: NestJS, Express, FastAPI, Flask, React, Socket.IO, BullMQ
+- **Data & Persistence**: PostgreSQL, Redis, DuckDB, MongoDB, Prisma ORM, Pandas, NumPy
+- **Machine Learning & AI**: LightGBM, Scikit-learn, TreeSHAP, Optuna, sqlglot
+- **Testing & Infrastructure**: Docker, Vitest, Jest, Pytest, Playwright, k6, GitHub Actions CI, Zod, Pydantic v2
