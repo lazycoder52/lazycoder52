@@ -1,6 +1,6 @@
 # Aditya
 
-Software and applied-AI engineer focused on distributed systems, real-time architectures, and production machine learning. Experienced in building high-concurrency transactional engines, guarded natural-language-to-SQL pipelines, and inventory demand planning systems. Seeking software engineering and applied-AI internships for summer 2027.
+Software and applied-AI engineer focused on distributed systems, real-time architectures, and production machine learning. Experienced in building high-concurrency transactional engines, guarded natural-language-to-SQL pipelines, and inventory demand planning systems.
 
 ## Projects
 
